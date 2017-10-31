@@ -52,4 +52,46 @@
 '''
 
 #便于后期会增加对日志输入的颜色区分
+#定义颜色枚举值
 
+class Colors():
+    black = 0  #“\033[30m 黑色字 \033[0m”
+    red = 1    #“\033[31m 红色字 \033[0m”
+    green = 2  #“\033[32m 绿色字 \033[0m”
+    yellow = 3 #“\033[33m 黄色字 \033[0m”
+    blue = 4   #“\033[34m 蓝色字 \033[0m”
+    purple = 5 #“\033[35m 紫色字 \033[0m”
+    sky_blue=6 #“\033[36m 天蓝字 \033[0m”
+    white = 7  #“\033[37m 白色字 \033[0m”
+
+
+
+def printLog(color,logInfo):
+    print getFormatColorLog(color,logInfo)
+
+
+def getFormatColorLog(color,logStr):
+    if color == Colors.black:
+        return "\033[30m %s \033[0m" % logStr
+    elif color == Colors.red:
+        return "\033[31m %s \033[0m" % logStr
+    elif color == Colors.green:
+        return "\033[32m %s \033[0m" % logStr
+    elif color == Colors.yellow:
+        return "\033[33m %s \033[0m" % logStr
+    elif color == Colors.blue:
+        return "\033[34m %s \033[0m" % logStr
+    elif color == Colors.purple:
+        return "\033[35m %s \033[0m" % logStr
+    elif color == Colors.sky_blue:
+        return "\033[36m %s \033[0m" % logStr
+    elif color == Colors.white:
+        return "\033[37m %s \033[0m" % logStr
+    else:
+        return "\033[37m %s \033[0m" % logStr
+
+
+# printLog(0,'出来')
+# printLog(1,'出来')
+# printLog(2,'出来')
+# printLog(3,'出来')
