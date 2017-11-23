@@ -1,4 +1,4 @@
-#-*- coding:utf-8 –*-
+# -*- coding:utf-8 –*-
 
 import sys
 import _List
@@ -28,7 +28,7 @@ while 1:
 listDict = {'banala':25,'apple':16,'orange':8,'lemon':13.5,'watermelon':9.5}
 # print listDict.values()[0]
 
-cart = [];
+cart = []
 
 # if remainMoney < 0:
 #     PKLog.printLog(PKLog.Colors.yellow, '余额不足，请及时充值')
@@ -40,11 +40,11 @@ while 1:
         remainMoney = money - listDict.values()[i]
         if remainMoney > 0:
             PKLog.printLog(PKLog.Colors.blue, '您可以购买%s' % listDict.keys()[i])
-            continue;i
+            continue
         else:
             if i == 0:
                 PKLog.printLog(PKLog.Colors.yellow, '余额不足，请及时充值')
-    break;
+    break
 
 
 
